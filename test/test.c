@@ -1,4 +1,4 @@
-#include "solution_c_bas_niveau.h
+#include "solution_c_bas_niveau.h"
 #include "unity.h"
 
 void setUp(void) {
@@ -18,6 +18,7 @@ void test_strlen(void){
 }
 
 void test_strcpy(void){
+    char *ns;
     TEST_ASSERT_EQUAL_STRING("Hello!", strcpy(ns, "Hello!"));
 }
 
@@ -26,11 +27,13 @@ void test_strreverse(void){
 }
 
 void test_longtodec(void){
-    TEST_ASSERT_EQUAL_STRING("4294967295", longtodec(4294967295));
+    char *ns;
+    TEST_ASSERT_EQUAL_STRING("4294967295", longtodec(4294967295, ns));
 }
 
 void test_hexstr(void){
-    TEST_ASSERT_EQUAL_STRING("ff", hexstr(255));
+    char *ns;
+    TEST_ASSERT_EQUAL_STRING("ff", hexstr(255, ns, 8));
 }
 
 // not needed when using generate_test_runner.rb
