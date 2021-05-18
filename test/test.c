@@ -36,7 +36,11 @@ void test_hexstr(void){
 // not needed when using generate_test_runner.rb
 int main(void) {
     UNITY_BEGIN();
-    RUN_TEST();
-    RUN_TEST();
+    RUN_TEST(test_puts);
+    RUN_TEST(test_strlen);
+    RUN_TEST(test_strcpy);
+    RUN_TEST(test_strreverse);
+    RUN_TEST(test_longtodec);
+    RUN_TEST(test_hexstr);
     return UNITY_END();
 }
