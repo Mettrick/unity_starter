@@ -18,20 +18,19 @@ void test_strlen(void){
 }
 
 void test_strcpy(void){
-
-    TEST_ASSERT_EQUAL_STRING("Hello!", strcpy());
+    TEST_ASSERT_EQUAL_STRING("Hello!", strcpy(ns, "Hello!"));
 }
 
 void test_strreverse(void){
-
+    TEST_ASSERT_EQUAL_STRING("!olleH", strreverse("Hello!"));
 }
 
 void test_longtodec(void){
-
+    TEST_ASSERT_EQUAL_STRING("4294967295", longtodec(4294967295));
 }
 
 void test_hexstr(void){
-
+    TEST_ASSERT_EQUAL_STRING("ff", hexstr(255));
 }
 
 // not needed when using generate_test_runner.rb
